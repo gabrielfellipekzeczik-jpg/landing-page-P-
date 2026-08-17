@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pâmela Moraes | Método ACM - Do Casulo ao Novo Eu</title>
+    <!-- Tailwind CSS para Estilização Premium e Responsiva -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fontes do Google: Inter e Playfair Display para contraste elegante -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAF7F2; /* Tom de fundo areia suave e sofisticado */
+            color: #2D2522; /* Texto marrom profundo para leitura confortável */
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .color-accent {
+            color: #A35C4E; /* Terracota quente e acolhedor */
+        }
+        .bg-accent {
+            background-color: #A35C4E;
+        }
+        .bg-accent-hover:hover {
+            background-color: #8C4D40;
+        }
+    </style>
+</head>
+<body class="antialiased scroll-smooth">
+
+    <!-- Cabeçalho de Navegação Premium (Responsivo para celulares e computadores) -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-[#FAF7F2]/95 border-b border-[#EAD7D1]/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex flex-col">
+                <span class="font-serif text-xl sm:text-2xl font-bold tracking-wide color-accent">PÂMELA MORAES</span>
+                <span class="text-[10px] sm:text-xs uppercase tracking-widest text-[#6B5A55] -mt-1 font-semibold">Psicóloga & Mentora</span>
+            </div>
+            <a href="#checkout" class="bg-accent bg-accent-hover text-white px-4 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide shadow-md transition duration-300">
+                Garantir Vaga
+            </a>
+        </div>
+    </header>
+
+    <!-- Seção Hero (Apresentação Principal e Apelo para Público Frio do Instagram) -->
+    <section class="relative pt-12 pb-20 lg:py-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Informações e Texto da Esquerda -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-[#EAD7D1]/60 color-accent uppercase tracking-wider">
+                        <span class="w-2 h-2 rounded-full bg-[#A35C4E] animate-ping"></span>
+                        Inscrições Abertas: Lote Promocional
+                    </span>
+                    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-[#2D2522]">
+                        Do casulo ao novo eu.<br>
+                        <span class="color-accent italic font-normal">Você renasce.</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-[#6B5A55] max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
+                        A mentoria definitiva baseada no <strong>Método ACM</strong> (Acolher, Capacitar, Multiplicar). Recupere a sua paz mental, elimine a sobrecarga e transforme-se na líder da sua própria jornada de vida.
+                    </p>
+                    
+                    <!-- Contador Regressivo Interativo para o fim da oferta -->
+                    <div class="bg-[#F3ECE6] p-4 sm:p-6 rounded-2xl inline-block w-full max-w-lg shadow-sm border border-[#EAD7D1]/50">
+                        <p class="text-xs uppercase tracking-wider text-[#6B5A55] font-semibold mb-3 text-center">As vagas com bônus fecham em:</p>
+                        <div class="grid grid-cols-4 gap-2 text-center" id="countdown">
+                            <div class="bg-white p-2 rounded-xl shadow-inner">
+                                <span id="days" class="block font-serif text-xl sm:text-3xl font-bold color-accent">00</span>
+                                <span class="text-[9px] uppercase text-[#8C7A75]">Dias</span>
+                            </div>
+                            <div class="bg-white p-2 rounded-xl shadow-inner">
+                                <span id="hours" class="block font-serif text-xl sm:text-3xl font-bold color-accent">00</span>
+                                <span class="text-[9px] uppercase text-[#8C7A75]">Horas</span>
+                            </div>
+                            <div class="bg-white p-2 rounded-xl shadow-inner">
+                                <span id="minutes" class="block font-serif text-xl sm:text-3xl font-bold color-accent">00</span>
+                                <span class="text-[9px] uppercase text-[#8C7A75]">Minutos</span>
+                            </div>
+                            <div class="bg-white p-2 rounded-xl shadow-inner">
+                                <span id="seconds" class="block font-serif text-xl sm:text-3xl font-bold color-accent">00</span>
+                                <span class="text-[9px] uppercase text-[#8C7A75]">Segundos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Botões de Ação Principais -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#checkout" class="bg-accent bg-accent-hover text-white text-center px-8 py-4 rounded-full font-semibold shadow-lg transition duration-300 transform hover:-translate-y-0.5">
+                            Quero me Inscrever (Apenas R$ 97)
+                        </a>
+                        <a href="#historia" class="border border-[#A35C4E] color-accent text-center px-8 py-4 rounded-full font-semibold hover:bg-[#F3ECE6] transition duration-300">
+                            Minha História
+                        </a>
+                    </div>
+                    <p class="text-xs text-[#8C7A75] text-center lg:text-left font-medium">
+                        ✨ <strong>Bônus Multiplicador Ativo:</strong> Faça sua inscrição e ganhe o direito de presentear outra mulher com acesso 100% gratuito.
+                    </p>
+                </div>
+
+                <!-- Foto de Destaque da Direita (Aonde você colocará suas fotos profissionais novas) -->
+                <div class="lg:col-span-5 relative flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- Elementos decorativos em degradê de fundo -->
+                        <div class="absolute -top-10 -left-10 w-40 h-40 bg-[#EAD7D1] rounded-full filter blur-3xl opacity-50 z-0"></div>
+                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-accent rounded-full filter blur-3xl opacity-20 z-0"></div>
+                        
+                        <!-- Moldura da imagem com estética editorial -->
+                        <div class="relative bg-white p-3 rounded-[2.5rem] shadow-xl border border-[#EAD7D1]/50 z-10">
+                            <div class="relative aspect-[3/4] rounded-[2rem] overflow-hidden">
+
+<video
+    id="videoHero"
+    class="absolute inset-0 w-full h-full object-cover"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    poster="foto-capa.jpg.jpeg"
+    controls>
+
+    <source src="video-apresentacao.mp4.mp4" type="video/mp4">
+
+</video>
+
+    <div class="absolute inset-0 bg-gradient-to-t from-[#2D2522]/40 via-transparent to-transparent pointer-events-none z-10"></div>
+				</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Por que o Bônus Multiplicador? (Foco na união feminina e não em ONG) -->
+    <section class="bg-white py-16 border-y border-[#EAD7D1]/40">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-6">
+            <span class="text-xs font-bold uppercase tracking-widest color-accent bg-[#F3ECE6] px-4 py-1.5 rounded-full">Uma Puxa a Outra</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2D2522]">Por que criamos o Bônus Multiplicador?</h2>
+            <p class="text-base sm:text-lg text-[#6B5A55] leading-relaxed font-light">
+                Nós acreditamos que nenhuma transformação feminina acontece de forma isolada. Quando uma mulher decide sair do casulo e assumir o controle da sua vida, ela precisa de uma rede de apoio forte para não recair no cansaço da rotina antiga.
+            </p>
+            <p class="text-sm sm:text-md text-[#8C7A75] italic leading-relaxed">
+                Por isso, ao garantir o seu acesso por apenas R$ 97, você ganha uma vaga idêntica para presentear uma amiga, colega de trabalho ou familiar. Vocês duas entram na mentoria e realizam a metamorfose juntas, fortalecendo a aliança entre vocês.
+            </p>
+            <div class="pt-4">
+                <div class="inline-flex items-center gap-3 bg-[#FAF7F2] border border-[#EAD7D1]/50 px-6 py-3 rounded-2xl text-left">
+                    <span class="text-xl">🤝</span>
+                    <span class="text-xs sm:text-sm font-semibold text-[#2D2522]">Duas mulheres conectadas = O dobro de força para voar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: A História de Superação da Pâmela (Perfeito para gerar conexão imediata) -->
+    <section id="historia" class="py-20 bg-[#F3ECE6]/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Imagem Editorial à Esquerda -->
+                <div class="lg:col-span-5 flex justify-center order-last lg:order-first">
+                    <div class="relative w-full max-w-sm">
+                        <div class="absolute inset-0 bg-[#EAD7D1]/80 rounded-[2.5rem] transform rotate-3 shadow-lg"></div>
+                        <div class="relative bg-white p-3 rounded-[2.5rem] shadow-xl border border-[#EAD7D1] transform -rotate-2 overflow-hidden">
+                            <div class="aspect-[3/4] rounded-[2rem] overflow-hidden">
+    				<img
+        				src="foto-pamelamoraes.jpg.jpeg"
+        				alt="Pâmela Moraes"
+        				class="w-full h-full object-cover">
+				</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Narrativa Escrita à Direita -->
+                <div class="lg:col-span-7 space-y-6 text-left">
+                    <span class="text-xs font-bold uppercase tracking-widest color-accent">Sua Mentora</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2D2522]">"Eu precisei viver o meu próprio casulo para entender como ajudar você no seu voo."</h2>
+                    <div class="space-y-4 text-sm sm:text-base text-[#6B5A55] font-light leading-relaxed">
+                        <p>
+                            Me formei em Psicologia com um grande desejo: ajudar pessoas. Quando o diploma chegou, achei que estava pronta. Mas a vida real me mostrou que a jornada tem altos e baixos. Atrás do papel de psicóloga tradicional, existia uma mulher que, muitas vezes, se sentia presa num casulo de cansaço extremo.
+                        </p>
+                        <p>
+                            A cobrança aumentou muito quando me tornei mãe. A culpa por precisar dividir o meu coração entre a profissão e a maternidade me esmagava. Veio a pandemia, o isolamento e, com ele, o meu momento mais escuro: enfrentei uma <strong>depressão pós-parto</strong> severa que me afastou de todos os atendimentos por mais de um ano.
+                        </p>
+                        <p>
+                            Mas o casulo não é o fim da história. Com a ajuda e o apoio certo, decidi que iria sair daquela situação. Há 4 anos, dei um passo simples: criei um grupo online de acolhimento mútuo. Começamos apenas com 6 mulheres. Minha irmã, Cibele, foi a âncora que me fez continuar a acreditar nos dias difíceis.
+                        </p>
+                        <p>
+                            Esse grupo cresceu de forma orgânica e hoje somos uma comunidade ativa com <strong>mais de 800 mulheres</strong>. Ali, eu entendi o meu verdadeiro destino. Desenvolvi o Método ACM, validado na pele de cada uma delas, focado em libertar e capacitar líderes.
+                        </p>
+                    </div>
+                    <div class="pt-2">
+                        <span class="font-serif italic text-lg text-[#2D2522] block font-semibold">Pâmela Moraes</span>
+                        <span class="text-xs uppercase tracking-widest text-[#8C7A75]">Criadora do Método ACM</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: Os Três Pilares (A, C, M) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-12">
+            <div class="space-y-4">
+                <span class="text-xs font-bold uppercase tracking-widest color-accent">A Engrenagem da Mudança</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2D2522]">Como Funciona o Método ACM?</h2>
+                <p class="text-sm sm:text-base text-[#6B5A55] max-w-2xl mx-auto font-light">
+                    Uma metodologia estruturada passo a passo para que você não sinta solidão ou desamparo durante o seu processo de transição pessoal e profissional.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pilar Acolher -->
+                <div class="bg-[#FAF7F2] p-8 rounded-3xl border border-[#EAD7D1]/30 space-y-4 hover:shadow-md transition duration-300 text-left">
+                    <div class="w-12 h-12 bg-[#EAD7D1]/50 rounded-2xl flex items-center justify-center color-accent font-serif text-xl font-bold">
+                        A
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-[#2D2522]">1. Acolher</h3>
+                    <p class="text-sm text-[#6B5A55] font-light leading-relaxed">
+                        Um ambiente livre de pressões, fórmulas prontas e julgamentos. Você é ouvida e acolhida nas suas dores e medos mais profundos pela mentora e pelas companheiras.
+                    </p>
+                </div>
+
+                <!-- Pilar Capacitar -->
+                <div class="bg-[#FAF7F2] p-8 rounded-3xl border border-[#EAD7D1]/30 space-y-4 hover:shadow-md transition duration-300 text-left">
+                    <div class="w-12 h-12 bg-[#EAD7D1]/50 rounded-2xl flex items-center justify-center color-accent font-serif text-xl font-bold">
+                        C
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-[#2D2522]">2. Capacitar</h3>
+                    <p class="text-sm text-[#6B5A55] font-light leading-relaxed">
+                        Instrumentalização prática baseada na psicologia comportamental. Ferramentas para recuperar a autoestima de vez, tomar decisões seguras e blindar a sua rotina.
+                    </p>
+                </div>
+
+                <!-- Pilar Multiplicar -->
+                <div class="bg-[#FAF7F2] p-8 rounded-3xl border border-[#EAD7D1]/30 space-y-4 hover:shadow-md transition duration-300 text-left">
+                    <div class="w-12 h-12 bg-[#EAD7D1]/50 rounded-2xl flex items-center justify-center color-accent font-serif text-xl font-bold">
+                        M
+                    </div>
+                    <h3 class="font-serif text-lg font-bold text-[#2D2522]">3. Multiplicar</h3>
+                    <p class="text-sm text-[#6B5A55] font-light leading-relaxed">
+                        O transbordo saudável. Você desenvolve a habilidade emocional de se tornar uma âncora, apoiando e inspirando outras mulheres da sua convivência a voarem também.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção: O Conteúdo Programático (4 Aulas com Acordéon Interativo) -->
+    <section class="py-20 bg-[#F3ECE6]/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center space-y-4 mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest color-accent">Grade Curricular</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2D2522]">O Conteúdo dos 4 Encontros Ao Vivo</h2>
+                <p class="text-xs sm:text-sm text-[#6B5A55] font-light max-w-lg mx-auto">
+                    Aulas dinâmicas e direcionadas via Zoom, com mentoria direta e microfones abertos no final de cada módulo.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- Encontro 1 -->
+                <div class="bg-white rounded-2xl border border-[#EAD7D1]/50 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('aula1')" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <div>
+                            <span class="text-[10px] font-bold color-accent uppercase tracking-wider block mb-1">Encontro 1</span>
+                            <h4 class="font-serif text-lg sm:text-xl font-bold text-[#2D2522]">Identificando o Casulo (O Diagnóstico Emocional)</h4>
+                        </div>
+                        <svg id="icon-aula1" class="w-5 h-5 transform transition-transform duration-300 color-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="content-aula1" class="hidden px-6 pb-6 text-sm text-[#6B5A55] font-light leading-relaxed border-t border-[#FAF7F2] pt-4 space-y-2">
+                        <p>Mapeamento completo sobre o seu estado de sobrecarga, esgotamento mental e paralisação. Entenda como quebrar as expectativas sufocantes e identifique os sabotadores da Síndrome da Impostora.</p>
+                        <p class="font-semibold text-[#2D2522]">⭐ Exercício Prático: Ferramenta "Diagnóstico do Casulo" para mapear os scores das áreas travadas da sua vida.</p>
+                    </div>
+                </div>
+
+                <!-- Encontro 2 -->
+                <div class="bg-white rounded-2xl border border-[#EAD7D1]/50 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('aula2')" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <div>
+                            <span class="text-[10px] font-bold color-accent uppercase tracking-wider block mb-1">Encontro 2</span>
+                            <h4 class="font-serif text-lg sm:text-xl font-bold text-[#2D2522]">O Pilar do Acolhimento (Gestão Emocional e Transição)</h4>
+                        </div>
+                        <svg id="icon-aula2" class="w-5 h-5 transform transition-transform duration-300 color-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="content-aula2" class="hidden px-6 pb-6 text-sm text-[#6B5A55] font-light leading-relaxed border-t border-[#FAF7F2] pt-4 space-y-2">
+                        <p>Aprenda a acolher as suas transições de vida e o medo do recomeço sem autocobrança. Estratégias emocionais para quebrar a necessidade de validação externa e regular crises de ansiedade diárias.</p>
+                        <p class="font-semibold text-[#2D2522]">⭐ Exercício Prático: O Protocolo de Autoacolhimento e Limites Dinâmicos.</p>
+                    </div>
+                </div>
+
+                <!-- Encontro 3 -->
+                <div class="bg-white rounded-2xl border border-[#EAD7D1]/50 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('aula3')" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <div>
+                            <span class="text-[10px] font-bold color-accent uppercase tracking-wider block mb-1">Encontro 3</span>
+                            <h4 class="font-serif text-lg sm:text-xl font-bold text-[#2D2522]">O Pilar da Capacitação (O Posicionamento de Líder)</h4>
+                        </div>
+                        <svg id="icon-aula3" class="w-5 h-5 transform transition-transform duration-300 color-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="content-aula3" class="hidden px-6 pb-6 text-sm text-[#6B5A55] font-light leading-relaxed border-t border-[#FAF7F2] pt-4 space-y-2">
+                        <p>Construção de uma comunicação assertiva e imagem de valor no lar, no relacionamento e no trabalho. Domine técnicas práticas para tomar decisões difíceis e dizer "não" de forma elegante, sem arrastar culpas.</p>
+                        <p class="font-semibold text-[#2D2522]">⭐ Exercício Prático: O Guia de Posicionamento Estratégico ACM para conversas difíceis.</p>
+                    </div>
+                </div>
+
+                <!-- Encontro 4 -->
+                <div class="bg-white rounded-2xl border border-[#EAD7D1]/50 overflow-hidden shadow-sm">
+                    <button onclick="toggleAccordion('aula4')" class="w-full flex justify-between items-center p-6 text-left focus:outline-none">
+                        <div>
+                            <span class="text-[10px] font-bold color-accent uppercase tracking-wider block mb-1">Encontro 4</span>
+                            <h4 class="font-serif text-lg sm:text-xl font-bold text-[#2D2522]">O Pilar do Multiplicar (O Voo e a Capacidade de Apoiar Outras)</h4>
+                        </div>
+                        <svg id="icon-aula4" class="w-5 h-5 transform transition-transform duration-300 color-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                    <div id="content-aula4" class="hidden px-6 pb-6 text-sm text-[#6B5A55] font-light leading-relaxed border-t border-[#FAF7F2] pt-4 space-y-2">
+                        <p>Ativação da inteligência relacional. Aprenda a ler os sinais de casulo em familiares, amigas ou lideradas. Como utilizar ferramentas de escuta qualificada para intervir e apoiar quem precisa de forma assertiva e equilibrada.</p>
+                        <p class="font-semibold text-[#2D2522]">⭐ Exercício Prático: O Mapa da Rede de Apoio ACM e Plano de Multiplicação Pessoal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção: O Bônus Multiplicador (Leve 2, Pague 1) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-[#FAF7F2] p-6 sm:p-12 rounded-[2.5rem] border border-accent/20 relative overflow-hidden shadow-sm">
+                <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#EAD7D1]/60 rounded-full filter blur-2xl"></div>
+                
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-7 space-y-5">
+                        <span class="inline-block px-3 py-1 bg-accent text-white text-[10px] font-bold uppercase tracking-widest rounded-full">Exclusivo de Lançamento</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2D2522]">Bônus Multiplicador: Compre 1, Presenteie Outra Mulher</h2>
+                        <p class="text-sm sm:text-base text-[#6B5A55] font-light leading-relaxed">
+                            O Método ACM só é completo quando transborda. Por isso, ao adquirir a sua vaga na mentoria por apenas <strong>R$ 97,00</strong>, você ganha automaticamente o direito de presentear outra mulher com uma vaga 100% gratuita.
+                        </p>
+                        <ul class="space-y-2 text-xs sm:text-sm text-[#2D2522] font-semibold">
+                            <li class="flex items-center gap-2">✔️ Duas mulheres transformadas pelo preço promocional de uma</li>
+                            <li class="flex items-center gap-2">✔️ Grupo VIP de partilha e materiais integrados inclusos para as duas</li>
+                            <li class="flex items-center gap-2">✔️ Indicação super fácil por formulário após a compra</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="bg-white p-6 rounded-2xl shadow-md border border-[#EAD7D1] text-center w-full max-w-xs space-y-4">
+                            <p class="text-xs uppercase tracking-wider text-[#8C7A75] font-bold">Valor Real das Duas Vagas</p>
+                            <p class="text-lg line-through text-stone-400">R$ 594,00</p>
+                            <p class="text-xs uppercase tracking-wider text-[#A35C4E] font-bold">Hoje</p>
+                            <p class="font-serif text-4xl font-bold text-[#2D2522]">R$ 97,00</p>
+                            <p class="text-[10px] text-stone-500">Pelos dois acessos completos</p>
+                            <a href="#checkout" class="block w-full bg-accent bg-accent-hover text-white py-3 rounded-full font-bold text-sm tracking-wide shadow transition duration-300">
+                                Garantir Vagas Duplas
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção: Checkout Seguro e Oferta de Alto Valor -->
+    <section id="checkout" class="py-20 bg-[#F3ECE6]/40 border-t border-[#EAD7D1]/50">
+        <div class="max-w-3xl mx-auto px-4 text-center space-y-8">
+            <div class="space-y-3">
+                <span class="text-xs font-bold uppercase tracking-widest color-accent">Inscrição Segura</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2D2522]">Inicie a sua metamorfose hoje.</h2>
+                <p class="text-xs sm:text-sm text-[#6B5A55] font-light max-w-md mx-auto">
+                    Inscreva-se com total segurança em menos de 1 minuto na nossa plataforma de pagamentos parceira.
+                </p>
+            </div>
+
+            <!-- Card Principal de Compra -->
+            <div class="bg-white p-6 sm:p-12 rounded-[2.5rem] shadow-xl border border-[#EAD7D1] text-center space-y-6 relative">
+                <!-- Selo de Vagas Limitadas para este lote -->
+                <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-accent text-white px-6 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider shadow">
+                    Lote Promocional por Tempo Limitado
+                </div>
+
+                <div class="space-y-1">
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-[#2D2522]">Acesso Total - Mentoria Método ACM</h3>
+                    <p class="text-xs text-stone-400">Do Casulo ao Novo Eu — Turma de Lançamento de Julho</p>
+                </div>
+
+                <div class="py-5 border-y border-stone-100 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-12">
+                    <div class="text-center sm:text-left">
+                        <span class="text-[10px] uppercase tracking-wider text-stone-400 block">Investimento Único</span>
+                        <span class="font-serif text-5xl font-bold color-accent">R$ 97,00</span>
+                        <span class="text-[10px] text-stone-500 block">No PIX ou em até 12x no Cartão</span>
+                    </div>
+                    <div class="text-left space-y-2">
+                        <p class="text-xs text-[#2D2522] flex items-center gap-2">✔️ <strong>2 Acessos Completos</strong> (Você e 1 Amiga)</p>
+                        <p class="text-xs text-[#2D2522] flex items-center gap-2">✔️ <strong>Caderno de Ativação ACM</strong> em PDF</p>
+                        <p class="text-xs text-[#2D2522] flex items-center gap-2">✔️ <strong>Acesso por 1 ano</strong> completo às gravações</p>
+                        <p class="text-xs text-[#2D2522] flex items-center gap-2">✔️ <strong>Grupo VIP Privado</strong> no WhatsApp</p>
+                    </div>
+                </div>
+
+                <!-- Campo para colar o Link do Checkout real -->
+                <div class="space-y-4">
+                    <!-- IMPORTANTE: Substituir o link temporário abaixo pelo link do Checkout real (Kiwify, Hotmart, etc) -->
+                    <a href="https://nubank.com.br/cobrar/rzsfh/6a3b2bfa-8b67-4e78-a14a-3257cdc27900" target="_blank" class="block w-full bg-accent bg-accent-hover text-white py-4 rounded-full font-bold text-base sm:text-lg tracking-wide shadow-lg transition duration-300 transform hover:-translate-y-0.5">
+                        Quero me Inscrever com o Bônus de R$ 97
+                    </a>
+                    
+                    <p class="text-[10px] text-stone-400">
+                        🔒 Transação processada em ambiente 100% criptografado e seguro. Garantia incondicional de reembolso por 7 dias.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Alternativa de Atendimento / Dúvidas via WhatsApp Comercial -->
+            <div class="bg-[#FAF7F2] p-5 rounded-2xl border border-[#EAD7D1] inline-flex flex-col sm:flex-row items-center gap-4 text-left max-w-xl mx-auto">
+                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 flex-shrink-0">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.73-1.45L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.965C16.528 1.977 14.07 1.01 11.99 1.01c-5.437 0-9.863 4.37-9.867 9.8-.001 1.73.483 3.424 1.4 4.938l-.993 3.626 3.714-.974zM18.232 15c-.3-.15-1.777-.878-2.05-.978-.272-.1-.47-.15-.668.15-.198.3-.767.978-.94 1.178-.173.2-.347.225-.648.075-.3-.15-1.266-.467-2.41-1.485-.89-.794-1.49-1.775-1.665-2.075-.173-.3-.018-.462.13-.61.135-.133.3-.349.45-.523.15-.174.2-.299.3-.499.1-.2.05-.375-.025-.524-.075-.15-.668-1.61-.915-2.205-.24-.579-.485-.5-.668-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.778-.727 2.025-1.429.247-.702.247-1.303.173-1.429-.075-.124-.272-.2-.57-.35z"></path></svg>
+                </div>
+                <div>
+                    <h4 class="font-bold text-[#2D2522] text-xs sm:text-sm">Ficou com alguma dúvida ou prefere pagar por PIX direto?</h4>
+                    <p class="text-[10px] text-[#6B5A55] mb-2">Fale no privado direto com a nossa equipe comercial oficial do WhatsApp.</p>
+                    <!-- IMPORTANTE: Trocar o número abaixo pelo número comercial de vocês -->
+                    <a href="https://wa.me/5541999341456?text=Olá!%20Quero%20saber%20mais%20sobre%20a%20Mentoria%20ACM." target="_blank" class="text-xs font-bold color-accent underline hover:text-[#8C4D40] transition duration-200">
+                        Chamar Suporte no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção FAQ (Perguntas Frequentes) -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center space-y-4 mb-12">
+                <span class="text-xs font-bold uppercase tracking-widest color-accent">Central de Ajuda</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-[#2D2522]">Dúvidas Frequentes</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Pergunta 1 -->
+                <div class="bg-[#FAF7F2] p-6 rounded-2xl border border-[#EAD7D1]/20">
+                    <h4 class="font-serif font-bold text-[#2D2522] mb-1">Como funciona o segundo acesso gratuito?</h4>
+                    <p class="text-xs text-[#6B5A55] font-light leading-relaxed">
+                        Logo após a confirmação de pagamento de R$ 97, você receberá um formulário por e-mail e dentro do grupo de alunas. Basta preencher o nome e o WhatsApp da mulher que quer presentear. Nós criamos e enviamos o acesso dela em até 24 horas.
+                    </p>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="bg-[#FAF7F2] p-6 rounded-2xl border border-[#EAD7D1]/20">
+                    <h4 class="font-serif font-bold text-[#2D2522] mb-1">E se eu não puder assistir ao vivo?</h4>
+                    <p class="text-xs text-[#6B5A55] font-light leading-relaxed">
+                        Fique tranquila! Todos os nossos 4 encontros serão gravados e disponibilizados em alta definição na área de membros. Você terá acesso livre para assistir no seu ritmo por 1 ano completo.
+                    </p>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="bg-[#FAF7F2] p-6 rounded-2xl border border-[#EAD7D1]/20">
+                    <h4 class="font-serif font-bold text-[#2D2522] mb-1">O Método ACM substitui terapia?</h4>
+                    <p class="text-xs text-[#6B5A55] font-light leading-relaxed">
+                        Não. A mentoria é um processo de desenvolvimento comportamental focado em inteligência emocional, autoestima e posicionamento. Ela não atua como tratamento clínico ou psicoterapia individualizada.
+                    </p>
+                </div>
+
+                <!-- Pergunta 4 -->
+                <div class="bg-[#FAF7F2] p-6 rounded-2xl border border-[#EAD7D1]/20">
+                    <h4 class="font-serif font-bold text-[#2D2522] mb-1">Quais são as datas das aulas?</h4>
+                    <p class="text-xs text-[#6B5A55] font-light leading-relaxed">
+                        Os encontros acontecerão às terças-feiras de julho de 2026, às 20h00 (horário de Brasília), via Zoom. Os links de acesso e os materiais serão compartilhados com antecedência dentro do nosso grupo VIP de alunas no WhatsApp.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé Premium -->
+    <footer class="bg-[#2D2522] text-[#EAD7D1] py-12 border-t border-[#A35C4E]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <p class="font-serif text-lg font-bold tracking-widest text-white">PÂMELA MORAES</p>
+            <p class="text-[10px] text-stone-400 font-light max-w-sm mx-auto">
+                Desenvolvimento emocional e liderança feminina baseados na psicologia comportamental aplicada. Todos os direitos reservados &copy; 2026.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Lógica de Funcionamento do Frontend (JavaScript Integrado) -->
+    <script>
+        // Função para Abrir e Fechar as informações do Conteúdo das Aulas (Accordion)
+        function toggleAccordion(id) {
+            const content = document.getElementById('content-' + id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // Contador de Regressão em Tempo Real para o fechamento das vagas em 30/08/2026 08:00 AM
+        function updateCountdown() {
+            const targetDate = new Date("August 30, 2026 08:00:00").getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference < 0) {
+                document.getElementById('countdown').innerHTML = "<div class='col-span-4 py-2 font-bold color-accent text-sm'>Acesso Liberado! Garanta sua vaga abaixo.</div>";
+                return;
+            }
+
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        // Atualização contínua a cada segundo
+        setInterval(updateCountdown, 1000);
+updateCountdown();
+
+const video = document.getElementById("videoHero");
+
+video.addEventListener("click", function () {
+
+    if (video.muted) {
+        video.muted = false;
+        video.play();
+    }
+
+});
+    </script>
+
+</body>
+</html>
